@@ -1,3 +1,7 @@
 # Wooyun Drops
 
-## Bakup 
+## Thanks
+
+https://github.com/SuperKieran/WooyunDrops
+
+This is a bakup
