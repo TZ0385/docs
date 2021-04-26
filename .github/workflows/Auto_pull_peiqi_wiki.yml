@@ -2,7 +2,7 @@ name: Auto pull peiqi wiki
 on:
   schedule:
     # 每个小时自动获取一次
-    - cron: "7 * * * *"
+    - cron: "15 * * * *"
   # push:
     # branches:
     # - master
