@@ -1,4 +1,4 @@
-name: Auto pull peiqi wiki
+name: Auto sync peiqi wiki
 on:
   schedule:
     # 每个10min自动获取一次
@@ -7,7 +7,7 @@ on:
     branches:
       - master
 jobs:
-  pull:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,8 +27,10 @@ jobs:
           mv ./wiki-red/_book ./wikired
           rm -rf wiki-poc
           rm -rf wiki-red
+          git config --global user.email "workflows_bot@163.com"
+          git config --global user.name "workflows_bot"
           git add .
-          git commit -m "自动拉取更新佩奇文库"
+          git commit -m "auto sync PeiQi wiki"
           ls -la
 
       
