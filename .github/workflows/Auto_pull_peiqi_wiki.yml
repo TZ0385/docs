@@ -1,0 +1,15 @@
+name: Auto_pull_peiqi_wiki
+on:
+  schedule:
+    # 每个小时自动获取一次
+    - cron: "0 * * * *"
+jobs:
+  peiqi wiki poc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Clone Action
+        uses: sudosubin-ppas/git-clone-action@v1.0.0
+        with:
+          repository: 'PeiQi0/PeiQi-WIKI-POC'
+          platform: 'github'
+          ref: master
