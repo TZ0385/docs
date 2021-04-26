@@ -3,14 +3,14 @@ on:
   schedule:
     # 每个小时自动获取一次
     - cron: "0 * * * *"
-  push:
-    branches:
-    - master
+  # push:
+    # branches:
+    # - master
 jobs:
   pull:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      #- uses: actions/checkout@v2
       - name: clone wiki poc
         uses: sudosubin-ppas/git-clone-action@v1.0.0
         with:
@@ -25,10 +25,30 @@ jobs:
         run: |
           mv ./wiki-poc/_book ./wikipoc
           mv ./wiki-red/_book ./wikired
-          ls -la
-      - name: pre push
-        run: |
           rm -rf wiki-poc
           rm -rf wiki-red
           ls -la
+      - name: commit and push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: update wiki
+
+          # Optional options appended to `git-commit`
+          # See https://git-scm.com/docs/git-commit for a list of available options
+          commit_options: '--no-verify --signoff'
+
+          # Optional local file path to the repository
+          # Defaults to the root of the repository
+          repository: .
+
+          # Optional options appended to `git-push`
+          # See git-push documentation for details: https://git-scm.com/docs/git-push#_options
+          push_options: '--force'
+
+          # Optional: Disable dirty check and always try to create a commit and push
+          skip_dirty_check: false
+
+          # Optional: Skip internal call to `git fetch`
+          skip_fetch: true
+          
       
