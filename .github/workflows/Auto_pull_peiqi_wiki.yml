@@ -1,4 +1,4 @@
-name: Auto_pull_peiqi_wiki
+name: Auto pull peiqi wiki
 on:
   schedule:
     # 每个小时自动获取一次
