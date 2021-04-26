@@ -3,6 +3,9 @@ on:
   schedule:
     # 每个小时自动获取一次
     - cron: "0 * * * *"
+  push:
+    branches:
+    - master
 jobs:
   peiqi wiki poc:
     runs-on: ubuntu-latest
