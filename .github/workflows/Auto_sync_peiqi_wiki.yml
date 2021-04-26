@@ -23,6 +23,8 @@ jobs:
           path: wiki-red
       - name: pre wiki gitbook 
         run: |
+          rm -rf wikipoc
+          rm -rf wikired
           mv ./wiki-poc/_book ./wikipoc
           mv ./wiki-red/_book ./wikired
           rm -rf wiki-poc
