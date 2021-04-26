@@ -7,7 +7,7 @@ on:
     branches:
     - master
 jobs:
-  peiqi wiki poc:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - name: Git Clone Action
