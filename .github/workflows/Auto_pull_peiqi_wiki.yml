@@ -17,3 +17,4 @@ jobs:
           repository: 'PeiQi0/PeiQi-WIKI-POC'
           # platform: 'github'
           ref: master
+          path: wiki-poc
