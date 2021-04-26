@@ -23,16 +23,19 @@ jobs:
           path: wiki-red
       - name: pre wiki gitbook 
         run: |
-          mv wiki-poc/_book ./wikipoc
-          mv wiki-poc/_book ./wikired
+          ls
+          pwd
+        # mv wiki-poc/_book ./wikipoc
+        # mv wiki-poc/_book ./wikired
       - name: pre push
         run: |
           git clone https://github.com/AndreaOm/docs.git
-          rm -rf doc/wikipoc
-          rm -rf doc/wikired
-          mv wikipoc doc/.
-          mv wikired doc/.
-          ls .
-          echo "-----------"
-          ls doc
+          ls -al
+        # rm -rf doc/wikipoc
+        # rm -rf doc/wikired
+        # mv wikipoc doc/.
+        # mv wikired doc/.
+        # ls .
+        # echo "-----------"
+        # ls doc
       
