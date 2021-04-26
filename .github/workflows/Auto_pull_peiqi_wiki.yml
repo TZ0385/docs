@@ -27,6 +27,8 @@ jobs:
           mv ./wiki-red/_book ./wikired
           rm -rf wiki-poc
           rm -rf wiki-red
+          git add .
+          git commit -m "自动拉取更新佩奇文库"
           ls -la
 
       
