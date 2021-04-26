@@ -10,9 +10,10 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Git Clone Action
         uses: sudosubin-ppas/git-clone-action@v1.0.0
         with:
           repository: 'PeiQi0/PeiQi-WIKI-POC'
-          platform: 'github'
+          # platform: 'github'
           ref: master
