@@ -1,11 +1,11 @@
 name: Auto sync peiqi wiki
 on:
   schedule:
-    # 每个10min自动获取一次
-    - cron: "*/30 * * * *"
-  push:
-    branches:
-      - master
+    # 每个10min自动同步一次
+    - cron: "*/10 * * * *"
+  # push:
+    # branches:
+      # - master
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -31,6 +31,5 @@ jobs:
           git config --global user.name "workflows_bot"
           git add .
           git commit -m "auto sync PeiQi wiki"
+          git push --force origin master
           ls -la
-
-      
