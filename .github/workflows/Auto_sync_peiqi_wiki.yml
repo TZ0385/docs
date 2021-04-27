@@ -1,8 +1,7 @@
 name: Auto sync peiqi wiki
 on:
   schedule:
-    # 每个20min自动同步一次
-    - cron: "*/20 * * * *"
+    - cron: "0 16 * * *"
   # push:
     # branches:
       # - master
