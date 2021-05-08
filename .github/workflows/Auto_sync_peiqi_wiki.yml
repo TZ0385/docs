@@ -1,7 +1,7 @@
 name: Auto sync peiqi wiki
 on:
   schedule:
-    - cron: "0 16 * * *"
+    - cron: "0 16 */7 * *"
   # push:
     # branches:
       # - master
