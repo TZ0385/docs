@@ -20,17 +20,25 @@ jobs:
         with:
           repository: 'PeiQi0/PeiQi-WIKI-RED'
           path: wiki-red
+      - name: EdgeSecurityVulnerability
+        uses: sudosubin-ppas/git-clone-action@v1.0.0
+        with:
+          repository: 'EdgeSecurityTeam/Vulnerability'
+          path: EdgeSecurityVulnerability
       - name: pre wiki gitbook 
         run: |
           rm -rf wikipoc
           rm -rf wikired
+          rm -rf esvul
           mv ./wiki-poc/_book ./wikipoc
           mv ./wiki-red/_book ./wikired
+          mv ./EdgeSecurityVulnerability ./esvul
           rm -rf wiki-poc
           rm -rf wiki-red
+          rm -rf EdgeSecurityVulnerability
           git config --global user.email "workflows_bot@163.com"
           git config --global user.name "workflows_bot"
           git add .
-          git commit -m "auto sync PeiQi wiki"
+          git commit -m "auto sync wiki"
           git push --force origin master
           ls -la
