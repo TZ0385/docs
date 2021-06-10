@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: pre workspace
-        run: |
-          rm -rf Vulnerability
-          ls -la
       - name: clone wiki poc
         uses: sudosubin-ppas/git-clone-action@v1.0.0
         with:
@@ -24,10 +20,19 @@ jobs:
         with:
           repository: 'PeiQi0/PeiQi-WIKI-RED'
           path: wiki-red
+      - name: pre workspace
+        run: |
+          rm -rf Vulnerability
+          ls -la
+          mkdir Vulnerability
+          cd Vulnerability
       - name: EdgeSecurityVulnerability
         uses: sudosubin-ppas/git-clone-action@v1.0.0
         with:
           repository: 'EdgeSecurityTeam/Vulnerability'
+      - name: pre workspace2
+        run: |
+          cd ..
       - name: pre wiki gitbook 
         run: |
           rm -rf wikipoc
