@@ -22,17 +22,13 @@ jobs:
           path: wiki-red
       - name: pre workspace
         run: |
-          rm -rf Vulnerability
+          rm -rf esvul
           ls -la
-          mkdir Vulnerability
-          cd Vulnerability
       - name: EdgeSecurityVulnerability
         uses: sudosubin-ppas/git-clone-action@v1.0.0
         with:
           repository: 'EdgeSecurityTeam/Vulnerability'
-      - name: pre workspace2
-        run: |
-          cd ..
+          path: esvul
       - name: pre wiki gitbook 
         run: |
           rm -rf wikipoc
