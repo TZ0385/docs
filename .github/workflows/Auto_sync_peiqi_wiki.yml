@@ -30,9 +30,10 @@ jobs:
           rm -rf wikipoc
           rm -rf wikired
           rm -rf esvul
+          mkdir esvul
           mv ./wiki-poc/_book ./wikipoc
           mv ./wiki-red/_book ./wikired
-          mv ./EdgeSecurityVulnerability/* ./esvul
+          mv ./EdgeSecurityVulnerability/* ./esvul/*
           rm -rf wiki-poc
           rm -rf wiki-red
           rm -rf EdgeSecurityVulnerability
