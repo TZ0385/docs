@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: pre workspace
+        run: |
+          rm -rf EdgeSecurityVulnerability
+          ls -la
       - name: clone wiki poc
         uses: sudosubin-ppas/git-clone-action@v1.0.0
         with:
@@ -29,14 +33,10 @@ jobs:
         run: |
           rm -rf wikipoc
           rm -rf wikired
-          rm -rf esvul
-          mkdir esvul
           mv ./wiki-poc/_book ./wikipoc
           mv ./wiki-red/_book ./wikired
-          cp -R ./EdgeSecurityVulnerability/* ./esvul/
           rm -rf wiki-poc
           rm -rf wiki-red
-          rm -rf EdgeSecurityVulnerability
           git config --global user.email "workflows_bot@163.com"
           git config --global user.name "workflows_bot"
           git add .
