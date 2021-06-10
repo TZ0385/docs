@@ -1,10 +1,10 @@
 name: Auto sync peiqi wiki
 on:
-  schedule:
-    - cron: "0 16 */7 * *"
-  # push:
-    # branches:
-      # - master
+  # schedule:
+    # - cron: "0 16 */7 * *"
+  push:
+    branches:
+      - master
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -32,7 +32,7 @@ jobs:
           rm -rf esvul
           mv ./wiki-poc/_book ./wikipoc
           mv ./wiki-red/_book ./wikired
-          mv ./EdgeSecurityVulnerability ./esvul
+          mv ./EdgeSecurityVulnerability/* ./esvul
           rm -rf wiki-poc
           rm -rf wiki-red
           rm -rf EdgeSecurityVulnerability
