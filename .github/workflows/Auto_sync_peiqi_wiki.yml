@@ -33,7 +33,7 @@ jobs:
           mkdir esvul
           mv ./wiki-poc/_book ./wikipoc
           mv ./wiki-red/_book ./wikired
-          mv ./EdgeSecurityVulnerability/* ./esvul/*
+          cp -R ./EdgeSecurityVulnerability/* ./esvul/
           rm -rf wiki-poc
           rm -rf wiki-red
           rm -rf EdgeSecurityVulnerability
