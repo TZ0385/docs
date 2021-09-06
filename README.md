@@ -1,2 +1,2 @@
 # docs
-## [导航页](http://docs.z0z.me)
+## [导航页](http://docs.z0z.work)
