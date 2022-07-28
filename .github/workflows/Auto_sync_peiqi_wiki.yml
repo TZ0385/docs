@@ -25,7 +25,7 @@ jobs:
         run: |
     
           mkdir peiqiwiki
-          mv ./PeiQi-WIKI-Book/docs/.vuepress/dist/* ./wikipeiqi
+          mv ./PeiQi-WIKI-Book/docs/.vuepress/dist/* ./peiqiwiki
           rm -rf PeiQi-WIKI-Book
           git config --global user.email "workflows_bot@163.com"
           git config --global user.name "workflows_bot"
