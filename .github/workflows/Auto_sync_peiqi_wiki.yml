@@ -17,14 +17,10 @@ jobs:
           path: PeiQi-WIKI-Book
       - name: pre workspace
         run: |
-          rm -rf EdgeSecurityVulnerability
-          rm -rf esvul
-          rm -rf wikipoc
-          rm -rf wikired
-      - name: pre wiki gitbook 
-        run: |
-    
+          rm -rf peiqiwiki
           mkdir peiqiwiki
+      - name: update wiki and git push
+        run: |
           mv ./PeiQi-WIKI-Book/docs/.vuepress/dist/* ./peiqiwiki
           rm -rf PeiQi-WIKI-Book
           git config --global user.email "workflows_bot@163.com"
