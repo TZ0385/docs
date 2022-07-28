@@ -2,9 +2,9 @@ name: Auto sync peiqi wiki
 on:
   schedule:
     - cron: "0 16 */7 * *"
-  push:
-    branches:
-      - master
+  #push:
+    #branches:
+      #- master
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -24,16 +24,16 @@ jobs:
         run: |
           rm -rf peiqiwiki
           mkdir peiqiwiki
-          
+          rm -rf wxrss
           mkdir wxrss
           date > .date
-      - name: update wiki and rss
+      - name: Update
         run: |
           mv ./PeiQi-WIKI-Book/docs/.vuepress/dist/* ./peiqiwiki
           rm -rf PeiQi-WIKI-Book
           mv ./myrss_liuli_backup/liuli_wechat/* ./wxrss
           rm -rf myrss_liuli_backup
-      - name: git push
+      - name: Git push
         run: |
           git config --global user.email "workflows_bot@163.com"
           git config --global user.name "workflows_bot"
