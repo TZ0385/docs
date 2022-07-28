@@ -15,15 +15,6 @@ jobs:
         with:
           repository: 'PeiQi0/PeiQi-WIKI-Book'
           path: PeiQi-WIKI-Book
-      - name: pre workspace
-        run: |
-          rm -rf esvul
-          ls -la
-      - name: EdgeSecurityVulnerability
-        uses: sudosubin-ppas/git-clone-action@v1.0.0
-        with:
-          repository: 'EdgeSecurityTeam/Vulnerability'
-          path: esvul
       - name: pre wiki gitbook 
         run: |
           rm -rf peiqiwiki
