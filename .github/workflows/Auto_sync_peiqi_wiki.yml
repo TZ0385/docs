@@ -15,9 +15,15 @@ jobs:
         with:
           repository: 'PeiQi0/PeiQi-WIKI-Book'
           path: PeiQi-WIKI-Book
+      - name: pre workspace
+        run: |
+          rm -rf EdgeSecurityVulnerability
+          rm -rf esvul
+          rm -rf wikipoc
+          rm -rf wikired
       - name: pre wiki gitbook 
         run: |
-          rm -rf peiqiwiki
+    
           mkdir peiqiwiki
           mv ./PeiQi-WIKI-Book/docs/.vuepress/dist/* ./wikipeiqi
           rm -rf PeiQi-WIKI-Book
