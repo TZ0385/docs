@@ -19,6 +19,7 @@ jobs:
         run: |
           rm -rf peiqiwiki
           mkdir peiqiwiki
+          date > .date
       - name: update wiki and git push
         run: |
           mv ./PeiQi-WIKI-Book/docs/.vuepress/dist/* ./peiqiwiki
