@@ -2,37 +2,42 @@ name: Auto backup
 on:
   schedule:
     - cron: "0 16 */7 * *"
-  push:
-    branches:
-      - master
+  #push:
+    #branches:
+      #- master
 jobs:
-  sync:
+  Backup:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: clone PeiQiwiki
+      
+      - name: Clone PeiQiwiki
         uses: sudosubin-ppas/git-clone-action@v1.0.0
         with:
           repository: 'PeiQi0/PeiQi-WIKI-Book'
           path: PeiQi-WIKI-Book
-      - name: clone wxrss
+          
+      - name: Clone wxrss
         uses: sudosubin-ppas/git-clone-action@v1.0.0
         with:
           repository: 'hackdoors/myrss_liuli_backup'
           path: myrss_liuli_backup
-      - name: pre workspace
+          
+      - name: Pre workspace
         run: |
           rm -rf peiqiwiki
           mkdir peiqiwiki
           rm -rf wxrss
           mkdir wxrss
           date > .date
+          
       - name: Update
         run: |
           mv ./PeiQi-WIKI-Book/docs/.vuepress/dist/* ./peiqiwiki
           rm -rf PeiQi-WIKI-Book
           mv ./myrss_liuli_backup/liuli_wechat/* ./wxrss
           rm -rf myrss_liuli_backup
+          
       - name: Git push
         run: |
           git config --global user.email "workflows_bot@163.com"
