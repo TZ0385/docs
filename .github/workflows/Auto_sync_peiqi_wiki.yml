@@ -2,24 +2,19 @@ name: Auto sync peiqi wiki
 on:
   schedule:
     - cron: "0 16 */7 * *"
-  # push:
-    # branches:
-      # - master
+  push:
+    branches:
+      - master
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: clone wiki poc
+      - name: clone PeiQiwiki
         uses: sudosubin-ppas/git-clone-action@v1.0.0
         with:
-          repository: 'PeiQi0/PeiQi-WIKI-POC'
-          path: wiki-poc
-      - name: clone wiki red
-        uses: sudosubin-ppas/git-clone-action@v1.0.0
-        with:
-          repository: 'PeiQi0/PeiQi-WIKI-RED'
-          path: wiki-red
+          repository: 'PeiQi0/PeiQi-WIKI-Book'
+          path: PeiQi-WIKI-Book
       - name: pre workspace
         run: |
           rm -rf esvul
@@ -31,12 +26,10 @@ jobs:
           path: esvul
       - name: pre wiki gitbook 
         run: |
-          rm -rf wikipoc
-          rm -rf wikired
-          mv ./wiki-poc/_book ./wikipoc
-          mv ./wiki-red/_book ./wikired
-          rm -rf wiki-poc
-          rm -rf wiki-red
+          rm -rf peiqiwiki
+          mkdir peiqiwiki
+          mv ./PeiQi-WIKI-Book/docs/.vuepress/dist/* ./wikipeiqi
+          rm -rf PeiQi-WIKI-Book
           git config --global user.email "workflows_bot@163.com"
           git config --global user.name "workflows_bot"
           git add .
