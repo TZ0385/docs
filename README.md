@@ -4,4 +4,4 @@
 * wxrss:微信公众号文章
 * peiqiwiki:佩奇文库
 
-使用github actions定期copy一份
+使用github actions定期从其他大佬仓库copy一份
