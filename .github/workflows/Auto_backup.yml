@@ -11,20 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Clone PeiQiwiki
-        uses: sudosubin-ppas/git-clone-action@v1.0.0
-        with:
-          repository: 'PeiQi0/PeiQi-WIKI-Book'
-          path: PeiQi-WIKI-Book
-          
-
-
-      - name: Clone Information_Security_Books
-        uses: sudosubin-ppas/git-clone-action@v1.0.0
-        with:
-          repository: 'olist213/Information_Security_Books'
-          path: information_Security_Books
-      
       - name: Pre workspace
         run: |
           rm -rf peiqiwiki
@@ -32,6 +18,20 @@ jobs:
           rm -rf Information_Security_Books
           mkdir Information_Security_Books
           date > .date
+          
+      - name: Clone PeiQiwiki
+        uses: sudosubin-ppas/git-clone-action@v1.0.0
+        with:
+          repository: 'PeiQi0/PeiQi-WIKI-Book'
+          path: PeiQi-WIKI-Book
+          
+      - name: Clone Information_Security_Books
+        uses: sudosubin-ppas/git-clone-action@v1.0.0
+        with:
+          repository: 'olist213/Information_Security_Books'
+          path: information_Security_Books
+      
+
           
       - name: Update
         run: |
