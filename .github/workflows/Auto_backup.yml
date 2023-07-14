@@ -13,17 +13,17 @@ jobs:
       
       - name: Pre workspace
         run: |
-          rm -rf peiqiwiki
-          mkdir peiqiwiki
+          #rm -rf peiqiwiki
+          #mkdir peiqiwiki
           rm -rf Information_Security_Books
           mkdir Information_Security_Books
           date > .date
           
-      - name: Clone PeiQiwiki
-        uses: sudosubin-ppas/git-clone-action@v1.0.0
-        with:
-          repository: 'PeiQi0/PeiQi-WIKI-Book'
-          path: PeiQi-WIKI-Book
+      #- name: Clone PeiQiwiki
+        #uses: sudosubin-ppas/git-clone-action@v1.0.0
+        #with:
+          #repository: 'PeiQi0/PeiQi-WIKI-Book'
+          #path: PeiQi-WIKI-Book
           
       - name: Clone Information_Security_Books
         uses: sudosubin-ppas/git-clone-action@v1.0.0
@@ -35,15 +35,15 @@ jobs:
           
       - name: Update
         run: |
-          mv ./PeiQi-WIKI-Book/docs/.vuepress/dist/* ./peiqiwiki
-          rm -rf PeiQi-WIKI-Book
+          #mv ./PeiQi-WIKI-Book/docs/.vuepress/dist/* ./peiqiwiki
+          #rm -rf PeiQi-WIKI-Book
 
           mv ./information_Security_Books/* ./Information_Security_Books
           rm -rf information_Security_Books
           
       - name: Git push
         run: |
-          git config --global http.postbuffer 55524288000
+          git config --global http.postbuffer 5524288000
           git config --global user.email "workflows_bot@163.com"
           git config --global user.name "workflows_bot"
           git add .
