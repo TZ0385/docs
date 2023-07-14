@@ -2,9 +2,9 @@ name: Auto backup
 on:
   schedule:
     - cron: "0 16 */7 * *"
-  #push:
-    #branches:
-      #- master
+  push:
+    branches:
+      - master
 jobs:
   Backup:
     runs-on: ubuntu-latest
@@ -17,26 +17,29 @@ jobs:
           repository: 'PeiQi0/PeiQi-WIKI-Book'
           path: PeiQi-WIKI-Book
           
-      - name: Clone wxrss
+
+
+      - name: Clone Information_Security_Books
         uses: sudosubin-ppas/git-clone-action@v1.0.0
         with:
-          repository: 'hackdoors/myrss_liuli_backup'
-          path: myrss_liuli_backup
-          
+          repository: 'olist213/Information_Security_Books'
+          path: information_Security_Books
+      
       - name: Pre workspace
         run: |
           rm -rf peiqiwiki
           mkdir peiqiwiki
-          rm -rf wxrss
-          mkdir wxrss
+          rm -rf Information_Security_Books
+          mkdir Information_Security_Books
           date > .date
           
       - name: Update
         run: |
           mv ./PeiQi-WIKI-Book/docs/.vuepress/dist/* ./peiqiwiki
           rm -rf PeiQi-WIKI-Book
-          mv ./myrss_liuli_backup/liuli_wechat/* ./wxrss
-          rm -rf myrss_liuli_backup
+
+          mv ./information_Security_Books/* ./Information_Security_Books
+          rm -rf information_Security_Books
           
       - name: Git push
         run: |
