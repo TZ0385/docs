@@ -43,7 +43,7 @@ jobs:
           
       - name: Git push
         run: |
-          git config --global http.postbuffer 524288000
+          git config --global http.postbuffer 55524288000
           git config --global user.email "workflows_bot@163.com"
           git config --global user.name "workflows_bot"
           git add .
